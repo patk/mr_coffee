@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="application.css" />
+    <script src="./form.js"></script>
   </head>
 
   <body>
@@ -24,26 +25,87 @@
         <ul class="nav-links">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">Qui sommes-nous</a></li>
-          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a class="current" href="contact.html">Nous contacter</a></li>
         </ul>
       </nav>
     </header>
-    <div class="form"></div>
+
     <div class="logo">
       <img src="Assets/logo_mrcoffee.png" alt="Mr.Coffee Logo" />
     </div>
-    <div class="location">
-      <h2>On vous attend !</h2>
-      <h4>Mr.Coffee</h4>
-      <p>
-        15 place Jules Guesde <br />
-        75006 Paris <br />
-        <br />
-        Tel : +33 9 46 25 78 45 <br />
-        Mail : contact@mr-coffee.com
-      </p>
-      <img src="Assets/carte_contact.png" alt="Mr.Coffee location" />
+
+    <section>
+      <form id="contact-form">
+        <h2>Dites nous tout !</h2>
+        <div class="input-field">
+          <label for="lname">Nom *</label>
+          <input type="text" id="lname" name="lname" required /> <br />
+        </div>
+        <div class="input-field">
+          <label for="fname">Prénom *</label>
+          <input type="text" id="fname" name="fname" required /> <br />
+        </div>
+        <div class="input-field">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" /> <br />
+        </div>
+        <div class="input-field">
+          <label for="email">Adresse mail *</label>
+          <input type="email" id="email" name="email" required /> <br />
+        </div>
+        <div class="input-field">
+          <label for="message">Message *</label>
+          <textarea
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Tapez votre message ici"
+            required
+          ></textarea>
+          <br />
+        </div>
+        <div class="button-wrapper">
+          <button type="submit" id="submit-button">Envoyer</button>
+        </div>
+      </form>
+    </section>
+
+    <div id="overlay">
+      <div id="pop-up-message">
+        <div class="pop-up-header">
+          <div>
+            <img src="Assets/logo_dark.png" alt="Mr.Coffee Logo (Dark)" />
+          </div>
+          <div class="pop-up-header-message">
+            <h2>MERCI</h2>
+            <h2>Votre message a bien été envoyé !</h2>
+          </div>
+        </div>
+        <h3>
+          Nous essaierons d’y répondre au mieux dans les plus brefs délais. À
+          bientot chez Mr.Coffee
+        </h3>
+        <div class="button-wrapper">
+          <button id="close-button">FERMER</button>
+        </div>
+      </div>
     </div>
+
+    <section>
+      <div class="location">
+        <h2>On vous attend !</h2>
+        <h4>Mr.Coffee</h4>
+        <p>
+          15 place Jules Guesde <br />
+          75006 Paris <br />
+          <br />
+          Tel : +33 9 46 25 78 45 <br />
+          Mail : contact@mr-coffee.com
+        </p>
+        <img src="Assets/carte_contact.png" alt="Mr.Coffee location" />
+      </div>
+    </section>
+
     <footer>
       <div class="footer-logo">
         <img src="Assets/logo_blanc.png" alt="Mr.Coffee Footer Logo" />
